@@ -19,3 +19,10 @@ for student in students:
     with open(filename, mode="w", encoding="utf-8") as message:
         message.write(content)
         print(f"... wrote {filename}")
+
+results_filename = "students_results.html"
+results_template = environment.get_template("results.html")
+context = {"students": students, "text_name": test_name, "max_score": max_score}
+with open(file=results_filename, mode="w", encoding="utf-8") as results:
+    results.write(results_template.render(context))
+    print(f"... wrote {results_filename}")
