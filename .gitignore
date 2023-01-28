@@ -1,3 +1,2 @@
 venv/
-jinja_realpython/message_*
-jinja_realpython/students_results.html
+jinja_realpython/generated/
